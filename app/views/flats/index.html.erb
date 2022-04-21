@@ -1,0 +1,15 @@
+
+<div>
+  <h1> All our Flats </h1>
+  <h2> Total : <%= @flats.count %> flats </h2>
+
+  <% @flats.each do |f| %>
+    <br>
+    <%= f.name %>
+    <%= f.address %>
+    <br>
+    <small><%= f.price_per_night %> euros -- </small>
+    <small>capacity of guests : <%= f.number_of_guests %></small>
+    <br>
+  <% end %>
+</div>
