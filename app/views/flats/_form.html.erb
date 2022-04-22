@@ -1,19 +1,8 @@
-<%= form_for @flat do |f| %>
-
-  <%= f.label :name, "Your flat name" %>
-  <%= f.text_field :name %>
-
-  <%= f.label :address, "Your flat address" %>
-  <%= f.text_field :address %>
-
-  <%= f.label :description, "Talk about your flat" %>
-  <%= f.text_field :description %>
-
-  <%= f.label :number_of_guests, "How many people you propose" %>
-  <%= f.text_field :number_of_guests %>
-
-  <%= f.label :price_per_night, "What's the price per night" %>
-  <%= f.text_field :price_per_night %>
-
+<%= simple_form_for(flat) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :description%>
+  <%= f.input :number_of_guests%>
+  <%= f.input :price_per_night%>
   <%= f.submit %>
 <% end %>
