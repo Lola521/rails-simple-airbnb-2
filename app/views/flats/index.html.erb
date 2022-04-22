@@ -2,18 +2,32 @@
 <div>
   <h1> All our Flats </h1>
   <h2> Total : <%= @flats.count %> flats </h2>
-<h2><%= link_to 'add a new flat', new_flat_path  %></h2>
+  <h2><%= link_to 'add a new flat', new_flat_path  %></h2>
 
-  <% @flats.each do |f| %>
-    <br>
-    <%= f.name %>
-    <%= f.address %>
-    <%= f.description %>
-    <br>
-    <small><%= f.price_per_night %> euros -- </small>
-    <small>capacity of guests : <%= f.number_of_guests %></small>
-    <br>
-    <%= link_to "go to see more",flat_path(f) %>
-    <br>
-  <% end %>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Description</th>
+        <th>Price per night</th>
+        <th>Number of guests</th>
+        <th colspan="5"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @flats.each do |f| %>
+        <tr>
+          <td><%= f.name %></td>
+          <td><%= f.address %></td>
+          <td><%= f.description %></td>
+          <td><%= f.price_per_night %>euros</td>
+          <td><%= f.number_of_guests %></td>
+          <td><%= link_to 'See more infomation', f %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
 </div>
