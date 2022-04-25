@@ -1,8 +1,13 @@
 
 <div>
-  <h1> All our Flats </h1>
-  <h2> Total : <%= @flats.count %> flats </h2>
-  <h2><%= link_to 'add a new flat', new_flat_path  %></h2>
+
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    <div class="container">
+      <h1> All our Flats </h1>
+      <p> Total : <%= @flats.count %> flats </p>
+      <a class="btn btn-flat" <%= link_to 'add a new flat', new_flat_path %></a>
+    </div>
+  </div>
 
   <table>
     <thead>
@@ -29,5 +34,14 @@
       <% end %>
     </tbody>
   </table>
+
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+    <div class="container">
+      <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
+      <p>Change your life and learn to code at one of our campuses around the world.</p>
+      <a class="btn btn-flat" href="#">Apply now</a>
+    </div>
+  </div>
+
 
 </div>
